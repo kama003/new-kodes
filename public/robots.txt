@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: kodes.tech
+Sitemap: https://kodes.tech/
+
