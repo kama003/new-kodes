@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import kamalImg from '../img/Kamaljit.jpg';
 import kodesLogo from '../img/kodes_logo.png';
@@ -39,6 +40,13 @@ const staggerContainer = {
 };
 
 export default function Page() {
+  const [selectedPackage, setSelectedPackage] = useState("");
+
+  const handleSelectPackage = (pkg: string) => {
+    setSelectedPackage(pkg);
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-[#0B0E14] text-slate-200 font-sans selection:bg-blue-500/30 overflow-x-hidden">
       {/* Header */}
@@ -78,7 +86,7 @@ export default function Page() {
                 <span className="text-blue-500">I Automate Your<br />Website, WhatsApp<br />& CRM</span>
               </h1>
               <p className="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
-                We handle your tech monthly so you can focus on closing deals and growing your business.
+                I handle your tech monthly so you can focus on closing deals and growing your business.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a href='https://wa.me/+919877055945?text=Hi%20I%20want%20a%20free%20automation%20audit%20for%20my%20business' className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-semibold transition-all hover:shadow-[0_0_25px_rgba(37,99,235,0.4)] active:scale-95">
@@ -407,7 +415,7 @@ export default function Page() {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-4 rounded-xl border border-slate-700 hover:bg-slate-800 text-white font-bold transition-all active:scale-95">
+                <button onClick={() => handleSelectPackage('Starter')} className="w-full py-4 rounded-xl border border-slate-700 hover:bg-slate-800 text-white font-bold transition-all active:scale-95">
                   Choose Starter
                 </button>
               </motion.div>
@@ -436,7 +444,7 @@ export default function Page() {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black transition-all hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] active:scale-95">
+                <button onClick={() => handleSelectPackage('Growth')} className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black transition-all hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] active:scale-95">
                   Choose Growth
                 </button>
               </motion.div>
@@ -461,7 +469,7 @@ export default function Page() {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-4 rounded-xl border border-slate-700 hover:bg-slate-800 text-white font-bold transition-all active:scale-95">
+                <button onClick={() => handleSelectPackage('Custom')} className="w-full py-4 rounded-xl border border-slate-700 hover:bg-slate-800 text-white font-bold transition-all active:scale-95">
                   Contact Sales
                 </button>
               </motion.div>
@@ -570,6 +578,41 @@ export default function Page() {
                       className="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                     />
                   </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-3">
+                    <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="john@example.com"
+                      className="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Phone</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="+91 1234567890"
+                      className="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Interested Package <span className="text-slate-500 font-normal lowercase">(optional)</span></label>
+                  <select
+                    name="package"
+                    value={selectedPackage}
+                    onChange={(e) => setSelectedPackage(e.target.value)}
+                    className="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  >
+                    <option value="" disabled className="text-slate-500">Select a package...</option>
+                    <option value="Starter" className="bg-[#0B0E14] text-white">Starter (₹8,000/mo)</option>
+                    <option value="Growth" className="bg-[#0B0E14] text-white">Growth (₹15,000/mo)</option>
+                    <option value="Custom" className="bg-[#0B0E14] text-white">Custom (Let's Talk)</option>
+                  </select>
                 </div>
                 <div className="space-y-3">
                   <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Message</label>
