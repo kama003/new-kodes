@@ -83,10 +83,10 @@ export default function Page() {
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.05] mb-6 tracking-tight">
                 Never Miss a Lead<br />
                 Again <br />
-                <span className="text-blue-500">I Automate Your<br />Website, WhatsApp<br />& CRM</span>
+                <span className="text-blue-500">We Automate Your<br />Website, WhatsApp<br />& CRM</span>
               </h1>
               <p className="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
-                I handle your tech monthly so you can focus on closing deals and growing your business.
+                We handle your tech monthly so you can focus on closing deals and growing your business.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a href='https://wa.me/+919877055945?text=Hi%20I%20want%20a%20free%20automation%20audit%20for%20my%20business' className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-semibold transition-all hover:shadow-[0_0_25px_rgba(37,99,235,0.4)] active:scale-95">
@@ -319,8 +319,8 @@ export default function Page() {
 
               {[
                 { step: '1', title: 'Free Audit', desc: 'We analyze your current setup and identify where you are wasting time and losing leads.' },
-                { step: '2', title: 'Custom Setup', desc: 'I implement the solutions, connect your tools, and eliminate the repetitive tasks.' },
-                { step: '3', title: 'Monthly Support', desc: 'You focus on your clients. I ensure your systems run smoothly, 24/7/365.' }
+                { step: '2', title: 'Custom Setup', desc: 'We implement the solutions, connect your tools, and eliminate the repetitive tasks.' },
+                { step: '3', title: 'Monthly Support', desc: 'You focus on your clients. We ensure your systems run smoothly, 24/7/365.' }
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -366,7 +366,7 @@ export default function Page() {
                     Hi, I&apos;m Kamal. With 6+ years of engineering experience, I don&apos;t just build tools <br /> I ensure your business tech works perfectly every single day.
                   </p>
                   <p>
-                    I&apos;m your long-term technical partner, not a one-time vendor. I personally oversee every automation I build.
+                    I&apos;m your long-term technical partner, not a one-time vendor. I personally oversee every automation we build.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-4">
@@ -552,7 +552,7 @@ export default function Page() {
               <div className="text-center mb-12 relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-4 tracking-tight">Ready to automate?</h2>
                 <p className="text-slate-400 text-lg">Fill out the form or message me directly.</p>
-                <p className="text-blue-500 text-sm font-bold mt-4 uppercase tracking-widest">I personally reply within 24 hours.</p>
+                <p className="text-blue-500 text-sm font-bold mt-4 uppercase tracking-widest">We personally reply within 24 hours.</p>
               </div>
 
               <form className="space-y-8 relative z-10" action="https://formsubmit.co/kamaljeetsingh0001@gmail.com" method="POST">
@@ -671,12 +671,12 @@ const features = [
   {
     icon: Activity,
     title: 'Zero Downtime & Fast Loading',
-    description: 'A slow site loses customers. I ensure your pages load instantly and never crash, so you never miss a sale.'
+    description: 'A slow site loses customers. We ensure your pages load instantly and never crash, so you never miss a sale.'
   },
   {
     icon: MessageSquare,
     title: 'Never Miss a Lead',
-    description: 'Stop losing customers because you couldn&apos;t reply in time. Automated WhatsApp responses capture interest instantly.'
+    description: "Stop losing customers because you couldn't reply in time. Automated WhatsApp responses capture interest instantly."
   },
   {
     icon: Database,
@@ -691,11 +691,11 @@ const features = [
   {
     icon: LineChart,
     title: 'System Monitoring',
-    description: 'I keep an eye on your systems 24/7. If something breaks, I fix it before you or your customers even notice.'
+    description: 'We keep an eye on your systems 24/7. If something breaks, we fix it before you or your customers even notice.'
   },
   {
     icon: Layers,
     title: 'Tailored Solutions',
-    description: 'Need a specific workflow for your clinic or agency? I build custom connectors that fit exactly how you work.'
+    description: 'Need a specific workflow for your clinic or agency? We build custom connectors that fit exactly how you work.'
   }
 ];
