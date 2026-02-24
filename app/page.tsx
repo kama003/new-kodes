@@ -54,9 +54,9 @@ export default function Page() {
             <Link href="#pricing" className="hover:text-white transition-colors">Pricing</Link>
             <Link href="#about" className="hover:text-white transition-colors">About</Link>
           </nav>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md text-sm font-medium transition-all hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] active:scale-95">
+          <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md text-sm font-medium transition-all hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] active:scale-95">
             Book Free Call
-          </button>
+          </a>
         </div>
       </header>
 
@@ -78,15 +78,15 @@ export default function Page() {
                 <span className="text-blue-500">I Automate Your<br />Website, WhatsApp<br />& CRM</span>
               </h1>
               <p className="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
-                I handle your tech monthly so you can focus on closing deals and growing your business.
+                We handle your tech monthly so you can focus on closing deals and growing your business.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-semibold transition-all hover:shadow-[0_0_25px_rgba(37,99,235,0.4)] active:scale-95">
+                <a href='https://wa.me/+919877055945?text=Hi%20I%20want%20a%20free%20automation%20audit%20for%20my%20business' className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-semibold transition-all hover:shadow-[0_0_25px_rgba(37,99,235,0.4)] active:scale-95">
                   Get Free Audit
-                </button>
-                <button className="bg-transparent border border-slate-700 hover:bg-slate-800 text-white px-8 py-4 rounded-md font-semibold transition-all active:scale-95">
+                </a>
+                <a href='#contact' className="bg-transparent border border-slate-700 hover:bg-slate-800 text-white px-8 py-4 rounded-md font-semibold transition-all active:scale-95">
                   Book Free Call
-                </button>
+                </a>
               </div>
             </motion.div>
             <motion.div
@@ -531,7 +531,7 @@ export default function Page() {
         </section>
 
         {/* Contact Form */}
-        <section className="py-32 bg-slate-900/20 border-t border-slate-800/50">
+        <section id='contact' className="py-32 bg-slate-900/20 border-t border-slate-800/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -547,12 +547,15 @@ export default function Page() {
                 <p className="text-blue-500 text-sm font-bold mt-4 uppercase tracking-widest">I personally reply within 24 hours.</p>
               </div>
 
-              <form className="space-y-8 relative z-10">
+              <form className="space-y-8 relative z-10" action="https://formsubmit.co/kamaljeetsingh0001@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New submission from your website!" />
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-3">
                     <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Name</label>
                     <input
                       type="text"
+                      name="name"
+                      required
                       placeholder="John Doe"
                       className="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                     />
@@ -561,6 +564,8 @@ export default function Page() {
                     <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Business Type</label>
                     <input
                       type="text"
+                      name="business_type"
+                      required
                       placeholder="E-commerce, Agency, etc."
                       className="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                     />
@@ -569,12 +574,14 @@ export default function Page() {
                 <div className="space-y-3">
                   <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Message</label>
                   <textarea
+                    name="message"
+                    required
                     placeholder="Tell me about your bottlenecks..."
                     rows={5}
                     className="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
                   ></textarea>
                 </div>
-                <button type="button" className="w-full bg-white hover:bg-slate-100 text-[#0B0E14] font-black py-5 rounded-xl transition-all active:scale-[0.98] shadow-xl">
+                <button type="submit" className="w-full bg-white hover:bg-slate-100 text-[#0B0E14] font-black py-5 rounded-xl transition-all active:scale-[0.98] shadow-xl">
                   Send Message
                 </button>
               </form>
