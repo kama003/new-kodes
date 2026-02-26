@@ -16,7 +16,9 @@ import {
   Globe,
   Server,
   Workflow,
-  ArrowRight
+  ArrowRight,
+  TrendingUp,
+  Shield
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -269,8 +271,49 @@ export default function Page() {
           </div>
         </section>
 
+        {/* What is Automation */}
+        <section className="py-32">
+          <div className="container mx-auto px-4">
+            <motion.div
+              {...fadeIn}
+              className="text-center max-w-3xl mx-auto mb-20"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">What is Automation & How It Benefits Your Business</h2>
+              <p className="text-slate-400 text-xl leading-relaxed">
+                Automation is the use of technology to perform repetitive tasks with minimal human intervention. It transforms your business by turning manual bottlenecks into seamless, hands-free operations.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="whileInView"
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            >
+              {[
+                { icon: Clock, title: 'Save Time', desc: 'Reclaim hours lost on manual data entry, follow-ups, and repetitive admin work.' },
+                { icon: TrendingUp, title: 'Scale Faster', desc: 'Handle 10x more leads or customers without needing to hire a bigger team.' },
+                { icon: Shield, title: 'Reduce Errors', desc: 'Software doesn\'t get tired. Eliminate human mistakes and missed opportunities.' },
+                { icon: Zap, title: 'Instant Action', desc: 'Engage with customers and trigger workflows in milliseconds, 24/7/365.' }
+              ].map((benefit, i) => (
+                <motion.div
+                  key={i}
+                  variants={fadeIn}
+                  className="group bg-slate-900/40 border border-slate-800/60 rounded-2xl p-8 hover:bg-slate-800/40 hover:border-blue-500/30 transition-all hover:-translate-y-2"
+                >
+                  <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-8 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
+                    <benefit.icon className="w-7 h-7 text-blue-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-slate-400 leading-relaxed text-base">{benefit.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
         {/* Features Section */}
-        <section id="services" className="py-32">
+        <section id="services" className="py-32 border-t border-slate-800/50">
           <div className="container mx-auto px-4">
             <motion.div
               {...fadeIn}
@@ -655,8 +698,8 @@ export default function Page() {
             <span className="font-bold text-xl tracking-tight text-white">Kodes</span>
           </div>
           <div className="flex gap-8 text-sm font-medium text-slate-500">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
           <p className="text-slate-500 text-sm font-medium">
             © 2026 Kodes. Made in India
