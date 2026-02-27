@@ -1,0 +1,7 @@
+# kodes.tech llms.txt
+
+> Automate business workflows by integrating websites, WhatsApp, and CRM to capture leads, respond instantly, and enhance efficiency for small to medium-sized enterprises.
+
+- [Privacy Policy](https://kodes.tech/privacy-policy): Outlines Kodes Tech's privacy practices, data collection, user rights, and policy updates.
+- [Kodes Tech Terms & Conditions](https://kodes.tech/terms-and-conditions): Outlines terms and conditions for using Kodes Tech's web development and related services.
+- [Business Automation Services](https://kodes.tech): Promote automation services for website, WhatsApp, and CRM to enhance business efficiency.
