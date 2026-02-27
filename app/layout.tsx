@@ -47,6 +47,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" />
 
       </head>
+      {/* Google Tag Manager (noscript) */}
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDS9HSG7"
+        height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
+      {/* End Google Tag Manager (noscript) */}
       <body suppressHydrationWarning>{children}
         <Analytics />
       </body>
